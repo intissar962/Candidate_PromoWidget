@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- app/code/Vendor/PromoWidget/etc/adminhtml/system.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="candidate_promowidget" translate="label" sortOrder="900" showInDefault="1" showInWebsite="1" showInStore="0">
+            <label>Promo Widget</label>
+            <tab>general</tab>
+            <resource>Candidate_PromoWidget::config</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuration</label>
+                <field id="enable" translate="label" sortOrder="10" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="message" translate="label" sortOrder="20" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Promotional message</label>
+                    <comment>Text that will appear on product pages</comment>
+                </field>
+                <field id="bg_color" translate="label" sortOrder="30" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background color (hex)</label>
+                    <comment>Example: #FFEB3B</comment>
+                </field>
+                <field id="text_color" translate="label" sortOrder="40" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text color (hex)</label>
+                    <comment>Example: #000000</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

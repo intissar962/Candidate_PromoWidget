@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- app/code/Vendor/PromoWidget/view/frontend/layout/catalog_product_view.xml -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Candidate\PromoWidget\Block\Promo"
+                   name="vendor.promowidget.promo"
+                   template="Candidate_PromoWidget::promo.phtml"
+                   before="product.info.description"
+                   ifconfig="candidate_promowidget/general/enable"
+            />
+        </referenceContainer>
+    </body>
+</page>
