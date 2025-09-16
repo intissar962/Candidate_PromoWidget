@@ -1,0 +1,21 @@
+{
+  "name": "candidate/module-promowidget",
+  "description": "Candidate PromoWidget module",
+  "type": "magento2-module",
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Candidate\\PromoWidget\\": ""
+    }
+  },
+  "authors": [
+    {
+      "email": "bennouna.bennouna@gmail.com",
+      "name": "Intissar Bennouna"
+    }
+  ]
+}
