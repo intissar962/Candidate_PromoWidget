@@ -8,24 +8,18 @@ if (empty($config)) {
 }
 
 ?>
-<div id="candidate-promo-widget"><?= $config['message'] ?></div>
+<?php if ($block->canShowPromo()) : ?>
+    <div id="candidate-promo-widget" data-bind="text:'<?= $config['message'] ?>'"></div>
 
-<script type="text/x-magento-init">
-    {
-        "#candidate-promo-widget": {
-            "Candidate_PromoWidget/js/promo-init": {}
+    <script type="text/x-magento-init">
+        {
+            "#candidate-promo-widget": {
+                "Candidate_PromoWidget/js/promo-init": {
+                    "config": <?= json_encode($config) ?>
         }
     }
-</script>
-<script>
-    const element = document.getElementById('candidate-promo-widget');
-    element.style.display = 'none';
-    if (element) {
-    // Show it after 5 seconds
-        setTimeout(function () {
-            element.style.display = 'block';
-            console.log('Widget displayed after 5s');
-        }, 5000);
-    }
-</script>
+}
+    </script>
+<?php endif; ?>
+
 

@@ -12,21 +12,42 @@
                     <label>Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="message" translate="label" sortOrder="20" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="show_in_all_pdp" translate="label" sortOrder="20" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show in all product pages</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="product_ids" translate="label" sortOrder="30" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product IDs</label>
+                    <comment>set product IDs you want ro display the promo widget separated by comma</comment>
+                    <depends>
+                        <field id="show_in_all_pdp">0</field>
+                    </depends>
+                </field>
+                <field id="message" translate="label" sortOrder="40" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Promotional message</label>
                     <comment>Text that will appear on product pages</comment>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
                 </field>
-                <field id="bg_color" translate="label" sortOrder="30" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="delay" translate="label" sortOrder="50" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Delay</label>
+                    <comment>Text will appears after a delay</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="bg_color" translate="label" sortOrder="60" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Background color (hex)</label>
                     <comment>Example: #FFEB3B</comment>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
                 </field>
-                <field id="text_color" translate="label" sortOrder="40" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="text_color" translate="label" sortOrder="70" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Text color (hex)</label>
                     <comment>Example: #000000</comment>
                     <depends>

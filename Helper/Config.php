@@ -18,6 +18,17 @@ class Config extends AbstractHelper
     protected const XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_MESSAGE = 'candidate_promowidget/general/message';
 
     /** @var string  */
+    protected const XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_SHOW_IN_ALL_PDP=
+        'candidate_promowidget/general/show_in_all_pdp';
+
+    /** @var string */
+    protected const XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_PRODUCT_IDS =
+        'candidate_promowidget/general/product_ids';
+
+    /** @var string  */
+    protected const XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_DELAY = 'candidate_promowidget/general/delay';
+
+    /** @var string  */
     protected const XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_BG_COLOR = 'candidate_promowidget/general/bg_color';
 
     /** @var string  */
@@ -48,11 +59,39 @@ class Config extends AbstractHelper
 
     /**
      * @param $storeId
+     * @return bool
+     */
+    public function isShowInAllPdpEnabled($storeId = null): bool
+    {
+        return (bool)$this->getConfigValue(self::XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_SHOW_IN_ALL_PDP, $storeId);
+    }
+
+    /**
+     * @param $storeId
      * @return string
      */
     public function getMessage($storeId = null): string
     {
         return $this->getConfigValue(self::XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_MESSAGE, $storeId);
+    }
+
+    /**
+     * @param $storeId
+     * @return array
+     */
+    public function getProductIds($storeId = null): array
+    {
+        $ids = $this->getConfigValue(self::XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_PRODUCT_IDS, $storeId);
+        return array_map('trim', explode(',', $ids));
+    }
+
+    /**
+     * @param $storeId
+     * @return int
+     */
+    public function getDelay($storeId = null): int
+    {
+        return (int)$this->getConfigValue(self::XML_PATH_SYSTEM_CONFIG_CANDIDATE_PROMOWIDGET_DELAY, $storeId);
     }
 
     /**

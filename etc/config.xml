@@ -4,7 +4,10 @@
         <candidate_promowidget>
             <general>
                 <enable>1</enable>
+                <show_in_all_pdp>1</show_in_all_pdp>
+                <product_ids>15</product_ids>
                 <message>Promo message</message>
+                <delay>5000</delay>
                 <bg_color>#FFEB3B</bg_color>
                 <text_color>#000000</text_color>
             </general>
