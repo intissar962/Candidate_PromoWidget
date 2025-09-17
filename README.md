@@ -14,7 +14,7 @@ It is intended as a technical exercise and demonstrates how to create a widget c
     - Only on selected product IDs (comma-separated list).
 - Appears with a small delay (5s) after page load.
 
-![img.png](img.png)
+![img_2.png](img_2.png)
 ![img_1.png](img_1.png)
 ---
 

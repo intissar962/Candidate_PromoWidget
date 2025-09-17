@@ -35,7 +35,7 @@
                 </field>
                 <field id="delay" translate="label" sortOrder="50" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Delay</label>
-                    <comment>Text will appears after a delay</comment>
+                    <comment>Text will appear after a delay (ms)</comment>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
