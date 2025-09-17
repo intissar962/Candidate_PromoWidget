@@ -15,14 +15,23 @@
                 <field id="message" translate="label" sortOrder="20" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Promotional message</label>
                     <comment>Text that will appear on product pages</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
                 </field>
                 <field id="bg_color" translate="label" sortOrder="30" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Background color (hex)</label>
                     <comment>Example: #FFEB3B</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
                 </field>
                 <field id="text_color" translate="label" sortOrder="40" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Text color (hex)</label>
                     <comment>Example: #000000</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
                 </field>
             </group>
         </section>
